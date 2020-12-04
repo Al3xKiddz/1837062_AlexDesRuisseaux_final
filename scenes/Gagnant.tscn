@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/sprites/Art Pack/Button_Quit.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/Art Pack/Button_Play.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/maxresdefault.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/unnamed.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Mort.gd" type="Script" id=5]
+
+[node name="Gagnant" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 526.556, 299.414 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 511.07, 149.707 )
+texture = ExtResource( 4 )
+
+[node name="play" type="Button" parent="."]
+margin_left = 268.441
+margin_top = 289.09
+margin_right = 748.441
+margin_bottom = 359.09
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Button" parent="."]
+margin_left = 304.577
+margin_top = 407.823
+margin_right = 691.577
+margin_bottom = 477.823
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
